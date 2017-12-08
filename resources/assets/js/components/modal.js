@@ -8,31 +8,37 @@ let VueModal = class VueModal {
 
   title(header) {
     this.header = header;
+
     return this;
   }
 
   text(body) {
     this.body = body;
+
     return this;
   }
 
   success() {
     this.type = 'success';
+
     return this;
   }
 
   error() {
     this.type = 'error';
+
     return this;
   }
 
   info() {
     this.type = 'info';
+
     return this;
   }
 
   warning() {
     this.type = 'warning';
+
     return this;
   }
 
