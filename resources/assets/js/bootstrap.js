@@ -51,3 +51,8 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+//Event Bus
+window.Vue = require('vue');
+
+window.bus = new Vue();
