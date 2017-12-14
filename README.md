@@ -1,4 +1,4 @@
-A simple configurable modal component built with Vue.js and Tailwind CSS in Laravel
+A simple configurable modal component built with Vue.js and Tailwind CSS in Laravel. Build it yourself with this [tutorial](https://nick-basile.com/blog/post/build-a-customizable-vuejs-modal-with-tailwind-css) on [Nick Basile's Blog](https://nick-basile.com/blog).
 
 ## How To Use:
 
