@@ -9,6 +9,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+//Event bus
+window.bus = new Vue();
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -16,6 +19,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('modal-component', require('./components/modal.vue'));
+Vue.component('modal-tester-component', require('./components/modal-tester.vue'));
 
 const app = new Vue({
     el: '#app'

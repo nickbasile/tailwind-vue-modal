@@ -1,5 +1,5 @@
 <template>
-    <div v-if="modal.visible" @click.self="modal.visible = false" class="h-screen w-full absolute flex items-center justify-center bg-modal">
+    <div v-if="modal.visible" @click.self="dismissModal" class="pin absolute flex items-center justify-center bg-transparent-black">
         <div class="bg-white rounded shadow p-8 m-4 max-w-lg max-h-full text-center overflow-y-scroll">
             <div class="mb-4">
                 <h1>{{ modal.header }}</h1>
@@ -7,18 +7,12 @@
             <div class="mb-8">
                 <p>{{ modal.body }}</p>
             </div>
-            <div class="flex justify-center">
-                <button class="flex-no-shrink text-white py-2 px-4 rounded" :class="typeColor" @click="modal.visible = false">Ok</button>
+            <div>
+                <button class="text-white py-2 px-4 rounded" :class="typeColor" @click="dismissModal">Ok</button>
             </div>
         </div>
     </div>
 </template>
-
-<style>
-    .bg-modal {
-        background: rgba(0,0,0,.2);
-    }
-</style>
 
 <script>
     import VueModal from './modal.js';
@@ -79,6 +73,9 @@
                   this.modal.visible = false;
                   document.body.classList.remove("overflow-hidden");
               });
+          },
+          dismissModal() {
+              return vueModal().dismiss();
           }
         }
     }

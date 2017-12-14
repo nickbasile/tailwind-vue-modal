@@ -1,6 +1,6 @@
 let VueModal = class VueModal {
   constructor(header = null, body = null, type = null, visible = true) {
-    this.header = header || 'title';
+    this.header = header || 'Title';
     this.body = body || 'text';
     this.type = type || 'default';
     this.visible = visible;
@@ -14,6 +14,12 @@ let VueModal = class VueModal {
 
   text(body) {
     this.body = body;
+
+    return this;
+  }
+
+  appearance(type) {
+    this.type = type;
 
     return this;
   }

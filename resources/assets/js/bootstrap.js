@@ -52,7 +52,3 @@ if (token) {
 //     key: 'your-pusher-key'
 // });
 
-//Event Bus
-window.Vue = require('vue');
-
-window.bus = new Vue();
